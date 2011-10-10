@@ -1,0 +1,18 @@
+{ "name" : "atomic"
+, "description" : "Atomic operations"
+, "version" : "0.0.1"
+, "homepage" : "https://github.com/stagas/atomic"
+, "author" : "George Stagas <gstagas@gmail.com> (http://stagas.com/)"
+, "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/stagas/atomic.git"
+  }
+, "main": "./index.js"
+, "devDependencies" : {
+    "tap" : "=0.0.x"
+  }
+, "scripts" : {
+    "test" : "tap test"
+  }
+, "engines" : { "node" : ">=0.4.12" }
+}
