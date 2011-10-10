@@ -1,4 +1,4 @@
-var atomic = require('./index')
+var atomic = require('../')
   , test = require('tap').test
 
 // a slow db emulation
