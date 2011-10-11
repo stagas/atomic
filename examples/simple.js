@@ -1,4 +1,4 @@
-var atomic = require('../')
+var atomic = require('../')()
 
 var o = {} // here's our db
 

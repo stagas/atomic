@@ -7,7 +7,7 @@ Atomic operations
 
 atomic lets you perform atomic operations based on keys. Additional tasks that
 try to access the same key get queued up and executed when the previous task
-calls 'done()' to indicate it has finished its operation. It's useful when you
+calls `done()` to indicate it has finished its operation. It's useful when you
 want to perform a multiple I/O calls on databases and don't want anything else
 messing with your values in-between calls.
 
@@ -20,7 +20,7 @@ messing with your values in-between calls.
 ## Example
 
 ```javascript
-var atomic = require('atomic')
+var atomic = require('atomic')()
 
 var o = {} // here's our db
 
