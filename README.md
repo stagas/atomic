@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/stagas/atomic.png)](http://travis-ci.org/stagas/atomic)
 # atomic
 
 Atomic operations
