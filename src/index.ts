@@ -1,8 +1,8 @@
 interface Task {
   context: any
+  args: any[]
   resolve: (value: any) => void
   reject: (reason?: any) => void
-  args: any[]
 }
 
 /**
@@ -48,12 +48,13 @@ export const atomic = (
   }
 
   return function (this: any, ...args: any[]): Promise<any> {
-    let resolve!: Task['resolve'], reject!: Task['reject']
+    let resolve!: Task['resolve']
+    let reject!: Task['reject']
     const promise = new Promise((_resolve, _reject) => {
       resolve = _resolve
       reject = _reject
     })
-    queue.push({ context: this, resolve, reject, args })
+    queue.push({ context: this, args, resolve, reject })
     flush()
     return promise
   }
