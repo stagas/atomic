@@ -8,6 +8,23 @@ interface Task {
 /**
  * Makes a function atomic.
  *
+ * ```js
+ * const fn = atomic(signal => async () => {
+ *   // some long async operation
+ *
+ *   // if we've been aborted during the long
+ *   // async process above, we wouldn't want
+ *   // to continue so lets return here
+ *   if (signal.aborted) return
+ *
+ *   // do things here if we didn't abort
+ * }, 500) // timeout at 500ms (don't pass anything for no timeout)
+ * fn()
+ * fn()
+ * fn()
+ * await fn() // this will run after the above have settled
+ * ```
+ *
  * @param signalClosure A function that receives the signal object
  *  from an AbortController and returns the function to become atomic.
  * @param maxTimeMs Time in milliseconds to timeout the operation. Will also signal abort.
