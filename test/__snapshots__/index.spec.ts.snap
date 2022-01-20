@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atomic(fn) alternate 1`] = `
+Array [
+  1,
+  2,
+  3,
+  4,
+]
+`;
+
+exports[`atomic(fn) makes the function atomic 1`] = `
+Array [
+  1,
+  2,
+  3,
+  4,
+]
+`;
+
+exports[`atomic(fn) receives parameters 1`] = `
+Array [
+  2,
+  3,
+  4,
+  5,
+]
+`;
+
+exports[`atomic(fn) returns result 1`] = `
+Array [
+  1,
+  2,
+  3,
+  4,
+]
+`;
+
+exports[`atomic(fn) throwing doesnt destroy queue 1`] = `
+Array [
+  1,
+  2,
+]
+`;
+
+exports[`atomic(fn) times out after maxTimeMs 1`] = `
+Array [
+  1,
+  2,
+]
+`;
+
+exports[`atomic(fn) times out after maxTimeMs 2`] = `
+Array [
+  Object {
+    "status": "fulfilled",
+    "value": 1,
+  },
+  Object {
+    "status": "fulfilled",
+    "value": 2,
+  },
+  Object {
+    "reason": [Error: Timed out],
+    "status": "rejected",
+  },
+  Object {
+    "reason": [Error: Timed out],
+    "status": "rejected",
+  },
+]
+`;
+
+exports[`atomic(fn) uses this 1`] = `
+Array [
+  1,
+  2,
+  3,
+  4,
+]
+`;
